@@ -7,8 +7,6 @@ else
   PSQL="psql --username=freecodecamp --dbname=worldcup -t --no-align -c"
 fi
 
-# Do not change code above this line. Use the PSQL variable above to query your database.
-
 update_teams () {
   TEAM_NAME=$1
   CHECK=$($PSQL "SELECT 1 FROM teams WHERE name='$TEAM_NAME'")
